@@ -1,4 +1,6 @@
 # 注意
+*前往 github 查看 `dockerfile` 及 `docker-compose.yml`*
+
 使用 docker-compose 部署时：
 1. 修改.env 里的 `COMPOSE_PROJECT_NAME`，它会影响：
 	生成的容器名字的前缀

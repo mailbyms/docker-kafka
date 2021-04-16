@@ -2,7 +2,7 @@ version: '3'
 
 services:
   kafka:
-    image: kafka:k8s4
+    image: mailbyms/kafka:2.12-2.5.0
     environment:
       TZ: Asia/Shanghai
       ZK_SERVER: zookeeper:2181

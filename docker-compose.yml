@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  kafka:
+    image: kafka:k8s4
+    environment:
+      TZ: Asia/Shanghai
+      ZK_SERVER: zookeeper:2181
+      ADVERTISED_IP: 192.168.1.197
+    hostname: kafka-0
+    networks:
+      default:
+        aliases:
+          - kafka-0
+    ports:
+      - "9092:9092"
+    volumes:
+      - ./kafka_data:/tmp/kafka-logs
+
+networks:
+    default:
+        external:
+            name: tiac-network
